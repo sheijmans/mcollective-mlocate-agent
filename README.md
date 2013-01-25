@@ -17,7 +17,7 @@ Follow the basic [plugin install guide](http://projects.puppetlabs.com/projects/
 
 ## Usage
 
-All options and filter are available
+All options and filters are available.
 
 ### Updating
 
