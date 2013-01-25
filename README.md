@@ -1,4 +1,4 @@
 mlocate
 =======
 
-MCollective Agent to manage/usr mlocate.
+MCollective Agent to manage/use mlocate.
