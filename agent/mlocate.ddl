@@ -2,9 +2,11 @@ metadata    :name        => "mlocate",
             :description => "Locate files on your filesystems",
             :author      => "S. Heijmans",
             :license     => "ASL2",
-            :version     => "1.0.1",
-            :url         => "https://github.com/sheijmans/mcollective-mlocate-agent",
+            :version     => "1.0.2",
+            :url         => "https://github.com/sheijmans/mlocate",
             :timeout     => 180
+
+requires :mcollective => "2.2.0"
 
 action "updatedb", :description => "Update the local database for mlocate" do
     output :output,

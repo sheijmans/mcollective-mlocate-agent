@@ -26,9 +26,10 @@ The ACTION can be one of the following:
     end
 
     def validate_configuration(configuration)
-      if MCollective::Util.empty_filter?(options[:filter])
+      if MCollective::Util.empty_filter?(options[:filter]) and
+      options[:discovery_options].empty?
         print "Do you really want to operate on " +
-          "services unfiltered? (y/n): "
+          "locate unfiltered? (y/n): "
 
         STDOUT.flush
 
@@ -53,7 +54,7 @@ The ACTION can be one of the following:
           found = "not found!"
         else
           found = data[:output]
-          printf("%-40s:\n", sender, found)
+          printf("%-40s:\n", sender)
           printf("%-80s\n\n", found)
         end
 

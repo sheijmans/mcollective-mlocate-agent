@@ -1,13 +1,10 @@
 module MCollective
   module Agent
     class Mlocate<RPC::Agent
-      metadata :name        => "Mlocate Agent",
-               :description => "Locate files on your filesystem",
-               :author      => "S. Heijmans",
-               :license     => "ASL2",
-               :version     => "1.0",
-               :url         => "https://github.com/sheijmans/mlocate",
-               :timeout     => 180
+
+      activate_when do
+        File.executable?("/usr/bin/locate")
+      end
 
       action "updatedb" do
         reply.fail! "Cannot find updatedb at /usr/bin/updatedb" unless File.exist?("/usr/bin/updatedb")
